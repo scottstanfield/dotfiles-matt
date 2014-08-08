@@ -29,6 +29,10 @@ export ANSIBLE_HOSTS=$HOME/ansible/hosts
 
 PROMPT='%{$fg_bold[green]%}%{$fg[white]%}%{$reset_color%} '
 
+export GOPATH=/go
+export GOROOT=/usr/local/go
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/go/bin:/usr/local/go/bin
+
 [ -e "${HOME}/.zsh_aliases" ] && source "${HOME}/.zsh_aliases"
 [ -e "${HOME}/.zshrc_local" ] && source "${HOME}/.zshrc_local"
 
