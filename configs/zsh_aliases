@@ -48,6 +48,17 @@ function fal() {
     grep --exclude-dir $EXCLUDED -rniI $@ . --color=always | less
 }
 
+#   function fal() {
+#       res=""
+#       res=$(git ls-files | grep -rniI $@ --color=always) 2>/dev/null
+#       if [ $? -ne 0 ]; then
+#           #TODO: Fix this so it does a proper fallback
+#           echo 'not git trying non git'
+#           res=$(ls | grep -rniI $@ --color=always)
+#       fi
+#       echo $res | less
+#   }
+
 # Find all recursively with line numbers including context
 # ignores case and binary files
 function fac() {
